@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Heebo", sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+header {
+  background-color: #fff;
+  height: 80px;
+}
+
+header #navbar {
+  display: flex; /*elemento fica lado a lado*/
+  justify-content: space-between; /*alinha horizontamente*/
+  align-items: center;
+  height: 80px;
+  padding: 0 2rem; /*padding margim interna do conteúdo*/
+  max-width: 1200px;
+  margin: 0 auto; /*superior */
+}
+
+header #navbar .nav-brand {
+  text-decoration: none; /*com none tira decoração*/
+  font-size: 1.5rem;
+  font-weight: 700; /*deixa fonte mais pesada fica negrito*/
+  color: #333; /*muda a cor da fonte*/
+}
+
+header #navbar .nav-list {
+  list-style: none; /*tira as bolinhas da lista*/
+
+  display: flex;
+  align-items: center; /*alinhandos na vertical*/
+  gap: 2rem;
+}
+
+header #navbar .nav-list .nav-item a {
+  /*sempre fazendo heranquia dos elementos você quer estilizar*/
+  text-decoration: none;
+  color: #333; /*a cor da letras*/
+  font-size: 20px; /*tamanho da letra*/
+  font-weight: 500; /*peso no caso é negrito*/
+}
+
+header #navbar .nav-list .nav-item a:hover {
+  color: #777;
+  transition: color 0.3s;
+}
+
+header #navbar .hambuguer-menu {
+  display: none;
+}
+/*esta função é para mostra */
+@media (max-width: 740px) {
+  header #navbar .hambuguer-menu {
+    display: block;
+  }
+  header #navbar .nav-list {
+    display: none;
+  }
+}
+/* section banner*/
+
+main {
+  margin-top: 6rem;
+}
+
+main #banner {
+  display: flex;
+  justify-content: space-between; /*flex bloco lado a lado*/
+  padding: 0 2rem; /*padding margim interna do conteúdo*/
+  max-width: 1200px;
+  margin: 0 auto; /*superior */
+}
+
+main #banner .banner_content .banner_content_title {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 60px; /*altura da linha*/
+  margin-bottom: 40px; /* margim inferior do titulo*/
+}
+
+main #banner .banner_content .banner_content_subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 500px; /*largura maxima do paragrafo de largura*/
+  margin-bottom: 38px; /*espaço do p parte de baixo entre o botão*/
+}
+
+main #banner .banner_content .banner_content_btn {
+  background-color: #00a8cc; /*cor do botão*/
+  color: white; /*cor da letra do botão*/
+  font-size: 20px; /*tamanho da letra do botão*/
+  border: none;
+  font-weight: 500;
+  border-radius: 2px;
+  padding: 8px 24px; /*8 em superior e inferior e 24 dos lados direita e esquerda*/
+}
+
+main #banner .banner_img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 400px;
+}
+
+@media (max-width: 920px) {
+  main #banner {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+  main #banner .banner_content {
+    text-align: center;
+  }
+}
+
+/*Section Post*/
+
+section#posts {
+  margin-top: 71px;
+  background-color: #edf7fa;
+}
+
+#posts .posts-content {
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#posts .posts-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+#posts .posts-content-header .section-title {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+#posts .posts-content-header .view-all-link {
+  text-decoration: none;
+  color: slateblue;
+}
+
+#posts .posts-content .post-cards {
+  display: flex;
+  gap: 20px;
+}
+
+#posts .posts-content .post-cards .post-card {
+  background-color: white;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+#posts .posts-content .post-cards .post-card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 37px;
+}
+
+#posts .posts-content .post-cards .post-card span {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px; /*como é span não funciona margin-bottom span como fosse uma constante não sai da linha que esta*/
+  display: block; /*para margim-bottom funciona coloca o display block*/
+}
+
+@media (max-width: 740px) {
+  #posts .posts-content .post-cards {
+    flex-direction: column;
+  }
+}
+
+footer .rodape {
+  flex-direction: row;
+  align-items: center;
+  
+}
