@@ -34,3 +34,8 @@ console.log(idadeNumber, typeof idadeNumber);
 
 //para converte numero para string NaN = not a number(não a numero)
 console.log(String(10), typeof String(10));
+console.clear();
+
+for (let i = 0; i <= 9; i += 2) {
+  console.log(i);
+}

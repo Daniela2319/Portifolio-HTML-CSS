@@ -1,11 +1,16 @@
-// const prompt = require("readline-sync");
+const numerosDaSorte = [37, 14, 26, 5, 94, 87]  
 
-// const idades = prompt.question("Qual eh sua idade?" );
+for(let i = 0; i < numerosDaSorte.length; i++){
 
-// const idadeNumber = Number(idades) // para converte string em numero
-// console.log(idadeNumber, typeof idadeNumber);
-
-// //para converte numero para string NaN = not a number(não a numero)
-// console.log(String(10), typeof String(10))
-
-//Exmplo 03
+  if (numerosDaSorte[i] % 2 === 0 && numerosDaSorte[i] < 50){
+  console.log( "Numero da sorte é par e menor que 50: ", numerosDaSorte[i]);
+  } 
+  
+  if (numerosDaSorte[i] < 50) {
+    console.log( "Numero da sorte é menor que 50: ", numerosDaSorte[i]);
+}
+ if (numerosDaSorte[i] > 50){
+    console.log( "Numero da sorte é maior que 50: ", numerosDaSorte[i]);
+  }
+ 
+}
